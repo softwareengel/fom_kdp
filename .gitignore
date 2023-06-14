@@ -1,0 +1,12 @@
+/mvnEdu/.gitignore
+/mvnEdu/.settings/org.eclipse.core.resources.prefs
+/mvnEdu/.settings/org.eclipse.jdt.core.prefs
+/mvnEdu/.settings/org.eclipse.m2e.core.prefs
+/mvnProject/.gitignore
+/mvnProject/.settings/org.eclipse.core.resources.prefs
+/mvnProject/.settings/org.eclipse.jdt.core.prefs
+/mvnProject/.settings/org.eclipse.m2e.core.prefs
+/mvnProjectLib/.gitignore
+/mvnProjectLib/.settings/org.eclipse.core.resources.prefs
+/mvnProjectLib/.settings/org.eclipse.jdt.core.prefs
+/mvnProjectLib/.settings/org.eclipse.m2e.core.prefs
