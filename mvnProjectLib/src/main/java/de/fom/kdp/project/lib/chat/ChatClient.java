@@ -59,7 +59,7 @@ public class ChatClient implements Runnable {
 
 				if (alMessages.size() > 0) {
 					ret = alMessages.remove(0);
-					System.out.println("client - getNextMEssage: " + ret);
+					System.out.println("client - getNextMessage: " + ret);
 				}
 			}
 			return ret;
