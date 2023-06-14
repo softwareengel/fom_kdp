@@ -30,6 +30,8 @@ public class HtmlParser {
 		try {
 			// Fetch the HTML content from a URL
 			String url = "https://hackernews.com";
+			
+			// using External Lib Jsoup
 			Document document = Jsoup.connect(url).get();
 
 			// Extract specific elements from the HTML

@@ -9,7 +9,7 @@ import org.junit.Test;
 public class SimpleWebServerTest {
 
 	@Test
-	public void testSimpleWebServer() throws IOException {
+	public void testHttpMethodClient_on_SimpleWebServer() throws IOException {
 		SimpleWebServer sws = new SimpleWebServer();
 		sws.startup();
 
@@ -31,5 +31,7 @@ public class SimpleWebServerTest {
 
 		sws.shutdown();
 	}
+
+
 
 }

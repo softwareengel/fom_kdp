@@ -1,7 +1,5 @@
 package de.fom.kdp.project.lib.httpserver;
 
-import static org.junit.Assert.*;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,7 +15,6 @@ public class GetRequestServerTest {
 
 		GetRequestServer grs = new GetRequestServer();
 		grs.startup();
-		
 
 		String serverUrl = "http://localhost:8000/hello";
 
@@ -53,8 +50,6 @@ public class GetRequestServerTest {
 
 			// Schließe die Verbindung
 			connection.disconnect();
-			
-			
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -62,4 +57,13 @@ public class GetRequestServerTest {
 		grs.shutdown();
 	}
 
+	/**
+	 * only for code coverage
+	 * 
+	 * @throws IOException
+	 */
+	@Test
+	public void test_main() throws IOException {
+		GetRequestServer.main(null);
+	}
 }

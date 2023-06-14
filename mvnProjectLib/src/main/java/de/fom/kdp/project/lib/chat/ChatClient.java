@@ -45,9 +45,9 @@ public class ChatClient implements Runnable {
 		Thread clientthread = new Thread(chatClient);
 		clientthread.start();
 
-		Thread.sleep(5000);
-		chatClient.stop();
-		clientthread.join();
+//		Thread.sleep(5000);
+//		chatClient.stop();
+//		clientthread.join();
 	}
 
 	class ReceiveThread implements Runnable {
@@ -78,7 +78,11 @@ public class ChatClient implements Runnable {
 					}
 				}
 			} catch (IOException e) {
-				e.printStackTrace();
+				if (e.getMessage().equals("Socket closed")) {
+					System.out.println("Server Socket closed.");
+				} else {
+					e.printStackTrace();
+				}
 			}
 
 		}

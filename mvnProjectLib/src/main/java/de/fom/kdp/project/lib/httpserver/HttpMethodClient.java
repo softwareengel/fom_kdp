@@ -17,24 +17,8 @@ import java.net.URL;
  *
  */
 public class HttpMethodClient {
-	public static void main(String[] args) throws IOException {
-		SimpleWebServer sws = new SimpleWebServer();
-		sws.startup();
-		
-		// Test GET method
-		httpGet("http://localhost:8000/");
 
-		// Test POST method
-		httpPost("http://localhost:8000/", "This is a POST request");
-
-		// Test PUT method
-		httpPut("http://localhost:8000/", "This is a PUT request");
-
-		// Test DELETE method
-		httpDelete("http://localhost:8000/");
-	}
-
-	static String  httpGet(String urlString) throws IOException {
+	static String httpGet(String urlString) throws IOException {
 		URL url = new URL(urlString);
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 		connection.setRequestMethod("GET");
@@ -51,7 +35,7 @@ public class HttpMethodClient {
 		return responseBody;
 	}
 
-	static String  httpPost(String urlString, String requestBody) throws IOException {
+	static String httpPost(String urlString, String requestBody) throws IOException {
 		URL url = new URL(urlString);
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 		connection.setRequestMethod("POST");
@@ -74,7 +58,7 @@ public class HttpMethodClient {
 		return responseBody;
 	}
 
-	 static String httpPut(String urlString, String requestBody) throws IOException {
+	static String httpPut(String urlString, String requestBody) throws IOException {
 		URL url = new URL(urlString);
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 		connection.setRequestMethod("PUT");
@@ -97,7 +81,7 @@ public class HttpMethodClient {
 		return responseBody;
 	}
 
-	 static String httpDelete(String urlString) throws IOException {
+	static String httpDelete(String urlString) throws IOException {
 		URL url = new URL(urlString);
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 		connection.setRequestMethod("DELETE");
