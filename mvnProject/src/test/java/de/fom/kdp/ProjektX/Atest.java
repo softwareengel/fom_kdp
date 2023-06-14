@@ -5,11 +5,19 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
-
+/**
+ * Test of A
+ * @author engels
+ *
+ */
 public class Atest {
 
+	/**
+	 * TEst Ctor, getter, setter 
+	 */
 	@Test
-	public void test1() {
+	public void testA_1() {
+		
 		A a = new A();
 		a.setI(1);
 		a.setNextA(new A());
@@ -18,7 +26,7 @@ public class Atest {
 	}
 	
 	@Test
-	public void test2() {
+	public void testA_main() {
 //		A a = new A();
 		A.main(null);
 	}
