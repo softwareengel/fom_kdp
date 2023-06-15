@@ -19,9 +19,12 @@ import com.sun.net.httpserver.HttpServer;
  */
 public class GetRequestServer {
 	HttpServer server = null;
+
+	int port = 8001;
+
 	public static void main(String[] args) {
 		try {
-			GetRequestServer grs = new GetRequestServer();
+			GetRequestServer grs = new GetRequestServer(8001);
 			int port = grs.startup();
 
 			System.out.println("HTTP Server gestartet. Port: " + port);
@@ -31,9 +34,17 @@ public class GetRequestServer {
 		}
 	}
 
+	/**
+	 * C'tor 
+	 * @param port
+	 */
+	public GetRequestServer(int port) {
+		super();
+		this.port = port;
+	}
+
 	int startup() throws IOException {
 		// Erstelle einen HTTP-Server an einem bestimmten Port
-		int port = 8000;
 		server = HttpServer.create(new InetSocketAddress(port), 0);
 
 		// Definiere den Pfad und den Handler für eine bestimmte URL
@@ -43,10 +54,12 @@ public class GetRequestServer {
 		server.start();
 		return port;
 	}
+
 	public void shutdown() {
 		server.stop(0);
 
 	}
+
 	static class MyHandler implements HttpHandler {
 		@Override
 		public void handle(HttpExchange exchange) throws IOException {

@@ -29,19 +29,36 @@ import com.sun.net.httpserver.HttpServer;
  *
  */
 public class SimpleWebServer {
+	/**
+	 * 
+	 */
 	HttpServer server = null;
+	/**
+	 * port of SimpleWebServer
+	 */
+	int port = 8000;
 
 	public static void main(String[] args) throws IOException {
 		// Create a new HTTP server listening on port 8000
-		SimpleWebServer sws = new SimpleWebServer();
+		SimpleWebServer sws = new SimpleWebServer(8000);
 
 		sws.startup();
 
 		System.out.println("Server is running on port 8000");
 	}
 
+	/**
+	 * c'tor of SimpleWebServer
+	 * 
+	 * @param port
+	 */
+	public SimpleWebServer(int port) {
+		super();
+		this.port = port;
+	}
+
 	void startup() throws IOException {
-		server = HttpServer.create(new InetSocketAddress(8000), 0);
+		server = HttpServer.create(new InetSocketAddress(port), 0);
 
 		// Set the handler for each supported HTTP method
 		server.createContext("/", new MyHandler());
@@ -52,7 +69,6 @@ public class SimpleWebServer {
 
 	public void shutdown() {
 		server.stop(0);
-
 	}
 
 	static class MyHandler implements HttpHandler {

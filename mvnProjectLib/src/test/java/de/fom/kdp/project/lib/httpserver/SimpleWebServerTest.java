@@ -10,7 +10,7 @@ public class SimpleWebServerTest {
 
 	@Test
 	public void testHttpMethodClient_on_SimpleWebServer() throws IOException {
-		SimpleWebServer sws = new SimpleWebServer();
+		SimpleWebServer sws = new SimpleWebServer(8000);
 		sws.startup();
 
 		SimpleWebServerClient htm = new SimpleWebServerClient();

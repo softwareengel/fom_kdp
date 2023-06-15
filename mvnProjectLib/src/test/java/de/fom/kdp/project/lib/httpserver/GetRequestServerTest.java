@@ -13,10 +13,10 @@ public class GetRequestServerTest {
 	@Test
 	public void testGet() throws IOException {
 
-		GetRequestServer grs = new GetRequestServer();
+		GetRequestServer grs = new GetRequestServer(8001);
 		grs.startup();
 
-		String serverUrl = "http://localhost:8000/hello";
+		String serverUrl = "http://localhost:8001/hello";
 
 		try {
 			// Sende eine GET-Anfrage an den Server
