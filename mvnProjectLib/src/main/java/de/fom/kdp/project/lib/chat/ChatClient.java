@@ -89,17 +89,17 @@ public class ChatClient implements Runnable {
 
 	}
 
-	private void start() {
-		try {
-			startConsoleInput();
-
-			socketwriter.close();
-			clientSocket.close();
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+//	private void start() {
+//		try {
+//			startConsoleInput();
+//
+//			socketwriter.close();
+//			clientSocket.close();
+//
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 	private void startConsoleInput() throws IOException {
 		BufferedReader consolereader = new BufferedReader(new InputStreamReader(System.in));

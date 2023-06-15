@@ -8,6 +8,6 @@ public class MyApp {
 
         LoggerHelper.logInfo("This is an informational message.");
         LoggerHelper.logWarning("This is a warning message.");
-        LoggerHelper.logError("This is an error message.", new RuntimeException("Something went wrong."));
+//        LoggerHelper.logError("This is an error message.", new RuntimeException("Something went wrong."));
     }
 }

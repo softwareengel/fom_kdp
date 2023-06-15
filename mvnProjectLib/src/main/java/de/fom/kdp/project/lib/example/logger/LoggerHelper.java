@@ -127,7 +127,7 @@ public class LoggerHelper {
 
             logInfo("Logging an informational message");
             logWarning("Logging a warning message");
-            logError("Logging an error message", new RuntimeException("Sample exception"));
+//            logError("Logging an error message", new RuntimeException("Sample exception"));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -57,6 +57,10 @@ public class ChatClientTest {
 		while ((msg = chatClient2.receiveThread.getNextMEssage()) != null) {
 			System.out.println("TestOut- chatClient2: " + msg);
 		}
+		
+		chatClient.stop();
+		chatClient2.stop();
+		
 		stopserver();
 	}
 
