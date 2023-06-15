@@ -16,7 +16,7 @@ import java.net.URL;
  * @author engels
  *
  */
-public class HttpMethodClient {
+public class SimpleWebServerClient {
 
 	static String httpGet(String urlString) throws IOException {
 		URL url = new URL(urlString);

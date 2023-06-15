@@ -13,7 +13,7 @@ public class SimpleWebServerTest {
 		SimpleWebServer sws = new SimpleWebServer();
 		sws.startup();
 
-		HttpMethodClient htm = new HttpMethodClient();
+		SimpleWebServerClient htm = new SimpleWebServerClient();
 		// Test GET method
 		String ret = htm.httpGet("http://localhost:8000/");
 		assertTrue(ret.contains("GET request"));
