@@ -24,14 +24,14 @@ public class ArrayListExample {
 
 		// Print the ArrayList
 		System.out.println(numbers); // Output: [10, 30, 40]
-		
+
 		numbers.removeAll(numbers);
 		numbers.add(5);
 		numbers.add(2);
 		numbers.add(8);
 		numbers.add(1);
 		numbers.add(4);
-		
+
         // Sort the ArrayList in ascending order
         Collections.sort(numbers);
 
@@ -39,7 +39,7 @@ public class ArrayListExample {
         System.out.println(numbers); // Output: [1, 2, 4, 5, 8]
 
         // Create an ArrayList to store strings
-		ArrayList<String> fruits = new ArrayList<>();    
+		ArrayList<String> fruits = new ArrayList<>();
 
 		// Add elements to the ArrayList
 		fruits.add("Apple");

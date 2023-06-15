@@ -22,10 +22,10 @@ public class HashSetExample {
 
         boolean containsGrapes = set.contains("Grapes");
         System.out.println("Contains Grapes? " + containsGrapes); // Output: Contains Grapes? false
-        
-        
-        
-        
+
+
+
+
         // Create a HashSet to store integers
         HashSet<Integer> setInt = new HashSet<>();
 
@@ -40,13 +40,13 @@ public class HashSetExample {
             int element = iterator.next();
             System.out.println(element);
         }
-        
-        
+
+
         // Remove an element from the HashSet
         setInt.remove(20);
 
         // Print the HashSet
         System.out.println(setInt); // Output: [40, 10, 30]
-        
+
     }
 }

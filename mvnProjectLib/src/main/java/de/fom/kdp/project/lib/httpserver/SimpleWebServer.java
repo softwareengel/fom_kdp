@@ -16,21 +16,21 @@ import com.sun.net.httpserver.HttpServer;
  * response messages. If the server receives an unsupported HTTP method, the
  * handleUnsupportedMethod() method is called, which sends a 405 status code
  * (Method Not Allowed).
- * 
+ *
  * The sendResponse() method is used to set the response headers, send the
  * appropriate response code, and write the response message to the output
  * stream.
- * 
+ *
  * Compile and run the code, and you can test different HTTP methods by using
  * tools like cURL or web browsers with the appropriate requests. The server
  * will respond with the corresponding messages for each HTTP method.
- * 
+ *
  * @author engels
  *
  */
 public class SimpleWebServer {
 	/**
-	 * 
+	 *
 	 */
 	HttpServer server = null;
 	/**
@@ -49,7 +49,7 @@ public class SimpleWebServer {
 
 	/**
 	 * c'tor of SimpleWebServer
-	 * 
+	 *
 	 * @param port
 	 */
 	public SimpleWebServer(int port) {

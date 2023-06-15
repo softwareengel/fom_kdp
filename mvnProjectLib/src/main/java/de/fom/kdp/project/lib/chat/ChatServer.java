@@ -1,41 +1,45 @@
 package de.fom.kdp.project.lib.chat;
 
-import java.io.*;
-import java.net.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
+ *
  * simple chat server in Java. It allows clients to connect, send messages, and
  * broadcasts those messages to all connected clients
- * 
+ *
  * * The ChatServer class implements the Runnable interface, allowing it to be
  * run in a separate thread. It listens for client connections on a specified
  * port using a ServerSocket. When a client connects, a new ClientHandler
  * instance is created to handle the client's input and output streams. Each
  * ClientHandler runs in its own thread and continuously reads messages from the
  * client and broadcasts them to all connected clients.
- * 
+ *
  * The stop() method is used to stop the server by closing the ServerSocket.
- * 
+ *
  * In the main() method, a ChatServer instance is created, and its run() method
  * is executed in a separate thread. After waiting for 5 seconds, the server is
  * stopped by calling the stop() method.
- * 
+ *
  * a list called clients is created to store all connected clients. When a new
  * client connects, the ClientHandler instance for that client is added to the
  * clients list. When a message is received from a client, the
  * sendMessageToAllClients() method is called, which iterates over all the
  * connected clients in the clients list and sends the message to each client
  * using their respective PrintWriter.
- * 
+ *
  * Additionally, when a client disconnects, the corresponding ClientHandler is
  * removed from the clients list.
- * 
+ *
  * when a client sends a message to the server, the server will broadcast the
  * message to all connected clients.
- * 
+ *
  * @author engels
  *
  */
@@ -124,7 +128,7 @@ public class ChatServer implements Runnable {
 				String message = null;
 
 				while ((message = reader.readLine()) != null) {
-					// synchronized (message) 
+					// synchronized (message)
 					{
 						System.out.println("Server - Received message from client: " + message);
 						sendMessageToAllClients(message);
@@ -151,7 +155,7 @@ public class ChatServer implements Runnable {
 
 		private void sendMessageToAllClients(String message) {
 			for (ClientHandler client : clients) {
-				// synchronized (client) 
+				// synchronized (client)
 				{
 					client.writer.println(message);
 					System.out.println("Server - send : " + message);

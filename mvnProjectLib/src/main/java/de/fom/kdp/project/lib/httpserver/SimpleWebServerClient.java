@@ -12,7 +12,7 @@ import java.net.URL;
  * library to send HTTP requests and receive responses. Each HTTP method is
  * tested by creating the corresponding request object, setting the request
  * method, and handling the request and response.
- * 
+ *
  * @author engels
  *
  */

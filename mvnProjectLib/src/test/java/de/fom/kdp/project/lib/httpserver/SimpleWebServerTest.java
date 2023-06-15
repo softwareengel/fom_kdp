@@ -1,6 +1,6 @@
 package de.fom.kdp.project.lib.httpserver;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 
@@ -15,18 +15,18 @@ public class SimpleWebServerTest {
 
 		SimpleWebServerClient htm = new SimpleWebServerClient();
 		// Test GET method
-		String ret = htm.httpGet("http://localhost:8000/");
+		String ret = SimpleWebServerClient.httpGet("http://localhost:8000/");
 		assertTrue(ret.contains("GET request"));
 
 		// Test POST method
-		ret = htm.httpPost("http://localhost:8000/", "This is a POST request");
+		ret = SimpleWebServerClient.httpPost("http://localhost:8000/", "This is a POST request");
 		assertTrue(ret.contains("POST request"));
 		// Test PUT method
-		ret = htm.httpPut("http://localhost:8000/", "This is a PUT request");
+		ret = SimpleWebServerClient.httpPut("http://localhost:8000/", "This is a PUT request");
 		assertTrue(ret.contains("PUT request"));
 
 		// Test DELETE method
-		ret = htm.httpDelete("http://localhost:8000/");
+		ret = SimpleWebServerClient.httpDelete("http://localhost:8000/");
 		assertTrue(ret.contains("DELETE request"));
 
 		sws.shutdown();

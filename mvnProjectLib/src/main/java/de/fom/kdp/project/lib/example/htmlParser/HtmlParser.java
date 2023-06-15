@@ -1,16 +1,16 @@
 package de.fom.kdp.project.lib.example.htmlParser;
 
+import java.io.IOException;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.IOException;
-
 /**
  * In this example, we added more parsing operations using Jsoup. Here's
  * what it does:
- * 
+ *
  * Fetches the HTML content from a specified URL using Jsoup.connect(url).get().
  * Extracts links (a tags with href attribute), images (img tags with src
  * attribute), and headings (h1, h2, h3 tags) using CSS selectors. Prints out
@@ -18,10 +18,10 @@ import java.io.IOException;
  * title() method of the Document object. Extracts the meta description by
  * selecting the first meta tag with name=description and retrieving the content
  * attribute.
- * 
+ *
  * Feel free to modify and expand this example to suit your specific parsing
  * needs.
- * 
+ *
  * @author engels
  *
  */
@@ -30,7 +30,7 @@ public class HtmlParser {
 		try {
 			// Fetch the HTML content from a URL
 			String url = "https://hackernews.com";
-			
+
 			// using External Lib Jsoup
 			Document document = Jsoup.connect(url).get();
 

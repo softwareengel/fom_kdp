@@ -7,14 +7,14 @@ import java.io.IOException;
  * In this example, the FileWriter class is used to create a new file and write
  * the specified content into it. You need to provide the file path where you
  * want to create the file, and the content you want to write.
- * 
+ *
  * Make sure to handle the IOException that may occur during the file writing
  * process. After writing the content, the writer should be closed to release
  * any system resources associated with it.
- * 
+ *
  * Remember to replace "path/to/file.txt" with the actual file path where you
  * want to write the content.
- * 
+ *
  * @author engels
  *
  */

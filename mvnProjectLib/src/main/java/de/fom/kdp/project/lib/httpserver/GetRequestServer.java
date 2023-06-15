@@ -13,7 +13,7 @@ import com.sun.net.httpserver.HttpServer;
  * auf der URL "/hello" reagiert. Wenn du den Server ausführst und
  * "http://localhost:8000/hello" im Browser aufrufst, wird die Nachricht "Hello,
  * world!" als Antwort angezeigt.
- * 
+ *
  * @author engels
  *
  */
@@ -35,7 +35,7 @@ public class GetRequestServer {
 	}
 
 	/**
-	 * C'tor 
+	 * C'tor
 	 * @param port
 	 */
 	public GetRequestServer(int port) {

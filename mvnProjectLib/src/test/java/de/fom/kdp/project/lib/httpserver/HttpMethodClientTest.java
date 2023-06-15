@@ -1,6 +1,6 @@
 package de.fom.kdp.project.lib.httpserver;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ public class HttpMethodClientTest {
 		SimpleWebServerClient htm = new SimpleWebServerClient();
 
 		// Test GET method
-		String ret = htm.httpGet("https://news.ycombinator.com/news"); // Status Code: 301, Moved Permanently to
+		String ret = SimpleWebServerClient.httpGet("https://news.ycombinator.com/news"); // Status Code: 301, Moved Permanently to
 																		// https://www.heise.de/
 		assertTrue(ret.contains("Hacker"));
 	}
@@ -24,7 +24,7 @@ public class HttpMethodClientTest {
 		SimpleWebServerClient htm = new SimpleWebServerClient();
 
 		// Test GET method
-		String ret = htm.httpGet("http://heise.de:80/"); // Status Code: 301, Moved Permanently to https://www.heise.de/
+		String ret = SimpleWebServerClient.httpGet("http://heise.de:80/"); // Status Code: 301, Moved Permanently to https://www.heise.de/
 		assertTrue(ret.contains("301"));
 
 	}
@@ -35,7 +35,7 @@ public class HttpMethodClientTest {
 		SimpleWebServerClient htm = new SimpleWebServerClient();
 
 		// Test GET method
-		String ret = htm.httpGet("https://www.heise.de:443/"); // Body: <!DOCTYPE html><html lang="de"
+		String ret = SimpleWebServerClient.httpGet("https://www.heise.de:443/"); // Body: <!DOCTYPE html><html lang="de"
 
 		assertTrue(ret.contains("meta name=\"description\""));
 

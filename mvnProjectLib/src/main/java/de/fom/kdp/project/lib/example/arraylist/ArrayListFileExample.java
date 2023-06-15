@@ -1,6 +1,10 @@
 package de.fom.kdp.project.lib.example.arraylist;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 /**
@@ -8,16 +12,16 @@ import java.util.ArrayList;
  * to it. We then write the myList object to a file named "list.ser" using
  * ObjectOutputStream. To read the ArrayList from the file, we use
  * ObjectInputStream and cast the retrieved object to an ArrayList<String>.
- * 
+ *
  * Please note that when using ObjectOutputStream and ObjectInputStream, the
  * objects being written and read must be serializable. In this example, we
  * assume that the elements in the ArrayList are of type String, which is
  * serializable by default. If you're working with custom objects, make sure
  * they implement the Serializable interface.
- * 
+ *
  * Remember to handle any potential exceptions that may occur during the file
  * operations.
- * 
+ *
  * @author engels
  *
  */

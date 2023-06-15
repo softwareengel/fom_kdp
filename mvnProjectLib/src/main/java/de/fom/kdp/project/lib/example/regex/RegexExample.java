@@ -7,11 +7,11 @@ import java.util.regex.Pattern;
  * In this example, all three regex examples are combined into a single Java
  * file. Each example is preceded by a comment describing its purpose. The input
  * string remains the same ("Hello, World!") throughout the examples.
- * 
+ *
  * You can compile and run this Java file to see the output for each example.
  * Remember to import the necessary classes from the java.util.regex package
  * before running the code.
- * 
+ *
  * @author engels
  *
  */

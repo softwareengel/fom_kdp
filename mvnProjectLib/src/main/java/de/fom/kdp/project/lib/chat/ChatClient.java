@@ -14,10 +14,10 @@ import java.util.ArrayList;
  * the console and press enter to send them to the server. The server will then
  * echo the message back to the client, and the client will display it in the
  * console as "Server: [message]".
- * 
+ *
  * You can run multiple instances of the client to simulate multiple users
  * interacting with the chat server.
- * 
+ *
  * @author engels
  *
  */

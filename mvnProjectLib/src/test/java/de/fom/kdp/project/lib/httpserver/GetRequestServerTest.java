@@ -59,7 +59,7 @@ public class GetRequestServerTest {
 
 	/**
 	 * only for code coverage
-	 * 
+	 *
 	 * @throws IOException
 	 */
 	@Test

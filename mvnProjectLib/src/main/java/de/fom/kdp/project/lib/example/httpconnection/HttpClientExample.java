@@ -5,8 +5,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 /**
- * Abrufen von HTTP - Web - Daten 
- * 
+ * Abrufen von HTTP - Web - Daten
+ *
  * @author engels
  *
  */

@@ -2,8 +2,7 @@ package de.fom.kdp.project.lib.example.hashtable;
 
 import java.util.Enumeration;
 import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.Map.Entry;
 
 public class HashtableExample {
 	public static void main(String[] args) {
@@ -26,10 +25,7 @@ public class HashtableExample {
 			System.out.println("Key: " + key + ", Value: " + value);
 		}
 
-		// Iterate over the Hashtable using Iterator
-		Iterator<Map.Entry<Integer, String>> iterator = hashtable.entrySet().iterator();
-		while (iterator.hasNext()) {
-			Map.Entry<Integer, String> entry = iterator.next();
+		for (Entry<Integer, String> entry : hashtable.entrySet()) {
 			Integer key = entry.getKey();
 			String value = entry.getValue();
 			System.out.println("Key: " + key + ", Value: " + value);
