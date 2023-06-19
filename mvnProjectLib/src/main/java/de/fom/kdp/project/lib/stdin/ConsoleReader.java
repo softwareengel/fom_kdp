@@ -1,4 +1,4 @@
-package de.fom.kdp.project.lib.consoleReader;
+package de.fom.kdp.project.lib.stdin;
 
 import java.util.Locale;
 import java.util.Scanner;

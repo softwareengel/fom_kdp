@@ -7,7 +7,7 @@ import java.io.InputStream;
 
 import org.junit.Test;
 
-import de.fom.kdp.project.lib.consoleReader.ConsoleReader;
+import de.fom.kdp.project.lib.stdin.ConsoleReader;
 
 /**
  * test for Scanner in ConsoleReader
