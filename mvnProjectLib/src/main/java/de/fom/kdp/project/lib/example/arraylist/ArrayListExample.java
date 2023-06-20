@@ -3,6 +3,12 @@ package de.fom.kdp.project.lib.example.arraylist;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Simple ArrayList Example
+ * 
+ * @author engels
+ *
+ */
 public class ArrayListExample {
 	public static void main(String[] args) {
 		// Create an ArrayList to store integers
@@ -13,11 +19,8 @@ public class ArrayListExample {
 		numbers.add(20);
 		numbers.add(30);
 
-
 		// Print the ArrayList
 		System.out.println(numbers); // Output: [10, 20, 30]
-
-
 
 		// Remove elements from the ArrayList
 		numbers.remove(1); // Remove the element at index 1
@@ -32,13 +35,13 @@ public class ArrayListExample {
 		numbers.add(1);
 		numbers.add(4);
 
-        // Sort the ArrayList in ascending order
-        Collections.sort(numbers);
+		// Sort the ArrayList in ascending order
+		Collections.sort(numbers);
 
-        // Print the sorted ArrayList
-        System.out.println(numbers); // Output: [1, 2, 4, 5, 8]
+		// Print the sorted ArrayList
+		System.out.println(numbers); // Output: [1, 2, 4, 5, 8]
 
-        // Create an ArrayList to store strings
+		// Create an ArrayList to store strings
 		ArrayList<String> fruits = new ArrayList<>();
 
 		// Add elements to the ArrayList

@@ -9,7 +9,7 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 
 /**
- * To test the Java client, you can run the ChatClient class. It will connect to
+ * To Use the Java client, you can run the ChatClient class. It will connect to
  * the chat server running on localhost at port 12345. You can type messages in
  * the console and press enter to send them to the server. The server will then
  * echo the message back to the client, and the client will display it in the

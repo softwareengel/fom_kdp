@@ -1,4 +1,4 @@
-package de.fom.kdp.project.lib.example.logger;
+package de.fom.kdp.project.lib.logger;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -76,7 +76,7 @@ public class LoggerHelper {
      * @param message   the message to be logged
      * @param throwable the throwable associated with the error
      */
-    public static void logError(String message, Throwable throwable) {
+	public static void logError(String message, Throwable throwable) {
         logger.log(Level.SEVERE, message, throwable);
     }
 
@@ -115,22 +115,6 @@ public class LoggerHelper {
         }
     }
 
-    /**
-     * The main method demonstrates the usage of the LoggerHelper class.
-     * It sets up the logger, logs some example messages, and catches any IOException that may occur.
-     *
-     * @param args the command-line arguments (not used)
-     */
-    public static void main(String[] args) {
-        try {
-            setupLogger();
 
-            logInfo("Logging an informational message");
-            logWarning("Logging a warning message");
-//            logError("Logging an error message", new RuntimeException("Sample exception"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }
 

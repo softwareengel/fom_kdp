@@ -1,6 +1,6 @@
 package de.fom.kdp.project.lib.peoplegeneratorapi;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 import java.util.Hashtable;
@@ -8,7 +8,6 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -30,7 +29,7 @@ public class PeoplegeneratorapiTest {
 		int anzahl = 2;
 		String jsonPeople = Peoplegeneratorapi.getPeople(anzahl);
 		if (jsonPeople != null) {
-			
+
 			JsonArray jsonArray = JsonParser.parseString(jsonPeople).getAsJsonArray();
 
 			assertEquals(anzahl, jsonArray.size()); // is count of datasets okay?
@@ -44,30 +43,33 @@ public class PeoplegeneratorapiTest {
 				}
 				System.out.println("-----------------------");
 			}
-		}else
-		{
+		} else {
 			System.err.println("keine Daten vom Server ");
 		}
 	}
 
 	@Test
-	public void testgetElemHAshSet() throws IOException, InterruptedException {
+	public void testGetElemHashtable() throws IOException, InterruptedException {
 
 		String jsonPeople = Peoplegeneratorapi.getPeople(2);
-		JsonArray jsonArray = JsonParser.parseString(jsonPeople).getAsJsonArray();
-		for (JsonElement jsonElement : jsonArray) {
+		if (jsonPeople != null) {
+			JsonArray jsonArray = JsonParser.parseString(jsonPeople).getAsJsonArray();
+			for (JsonElement jsonElement : jsonArray) {
 
-			if (jsonElement.isJsonObject()) {
+				if (jsonElement.isJsonObject()) {
 //			countPeople++;
-				JsonObject jsonObject = jsonElement.getAsJsonObject();
-				// DecodeJson.generateClassFromJson(jsonObject);
-				Hashtable<String, Object> keyValuePairs = DecodeJson.getElemHAshSet(jsonObject);
+					JsonObject jsonObject = jsonElement.getAsJsonObject();
+					// DecodeJson.generateClassFromJson(jsonObject);
+					Hashtable<String, Object> keyValuePairs = DecodeJson.getElemHAshSet(jsonObject);
 
-				// Print the key-value pairs
-				for (Map.Entry<String, Object> entry : keyValuePairs.entrySet()) {
-					System.out.println(entry.getKey() + ":" + entry.getValue());
+					// Print the key-value pairs
+					for (Map.Entry<String, Object> entry : keyValuePairs.entrySet()) {
+						System.out.println(entry.getKey() + ":" + entry.getValue());
+					}
 				}
 			}
+		} else {
+			System.err.println("keine Daten vom Server ");
 		}
 
 	}

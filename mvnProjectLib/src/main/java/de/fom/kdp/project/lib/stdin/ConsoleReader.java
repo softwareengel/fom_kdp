@@ -8,7 +8,7 @@ public class ConsoleReader {
 	/**
 	 * read string from console
 	 *
-	 * @return
+	 * @return String with console input data
 	 */
 	public static String readString() {
 		try (Scanner scanner = new Scanner(System.in)) {
@@ -22,7 +22,7 @@ public class ConsoleReader {
 	/**
 	 * read int from console
 	 *
-	 * @return
+	 * @return int with console input data
 	 */
 	public static int readInt() {
 		try (Scanner scanner = new Scanner(System.in)) {
@@ -33,16 +33,21 @@ public class ConsoleReader {
 
 	}
 
+	/**
+	 * read float from console
+	 * 
+	 * @return float with console input data
+	 */
 	public static float readFloat() {
 		try (Scanner scanner = new Scanner(System.in)) {
-	        // Get the current locale used by the Scanner object
-	        Locale currentLocale = scanner.locale();
+			// Get the current locale used by the Scanner object
+			Locale currentLocale = scanner.locale();
 
-	        System.out.println("Current Scanner Locale: " + currentLocale);
+			System.out.println("Current Scanner Locale: " + currentLocale);
 
-	        // Set the desired locale with the appropriate decimal separator
-	        scanner.useLocale(Locale.US);
-	        System.out.println("New Scanner Locale: " + scanner.locale());
+			// Set the desired locale with the appropriate decimal separator
+			scanner.useLocale(Locale.US);
+			System.out.println("New Scanner Locale: " + scanner.locale());
 
 			System.out.print("Enter float: ");
 			float input = scanner.nextFloat();
@@ -51,17 +56,22 @@ public class ConsoleReader {
 
 	}
 
+	/**
+	 * read double from console
+	 * 
+	 * @return double with console input data
+	 */
 	public static double readDouble() {
 
 		try (Scanner scanner = new Scanner(System.in)) {
-	        // Get the current locale used by the Scanner object
-	        Locale currentLocale = scanner.locale();
+			// Get the current locale used by the Scanner object
+			Locale currentLocale = scanner.locale();
 
-	        System.out.println("Current Scanner Locale: " + currentLocale);
+			System.out.println("Current Scanner Locale: " + currentLocale);
 
-	        // Set the desired locale with the appropriate decimal separator
-	        scanner.useLocale(Locale.US);
-	        System.out.println("New Scanner Locale: " + scanner.locale());
+			// Set the desired locale with the appropriate decimal separator
+			scanner.useLocale(Locale.US);
+			System.out.println("New Scanner Locale: " + scanner.locale());
 
 			System.out.print("Enter double: ");
 			double input = scanner.nextDouble();

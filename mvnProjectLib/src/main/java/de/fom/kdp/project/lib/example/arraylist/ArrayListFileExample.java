@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * In this example, we create an ArrayList called myList and add some elements
  * to it. We then write the myList object to a file named "list.ser" using
  * ObjectOutputStream. To read the ArrayList from the file, we use
- * ObjectInputStream and cast the retrieved object to an ArrayList<String>.
+ * ObjectInputStream and cast the retrieved object to an ArrayList&lt;String&gt;.
  *
  * Please note that when using ObjectOutputStream and ObjectInputStream, the
  * objects being written and read must be serializable. In this example, we

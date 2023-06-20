@@ -6,10 +6,10 @@ package de.fom.kdp.k02.imperativ;
  * <p>
  * Generieren der Dokumentation
  * <ul>
- * <li>Export->Javadoc-> ... VM Options: <code> -encoding utf8</li>
- * -docencoding utf8 -charset utf8</code> <br>
- * - mit Elcipse Maven: Run As - Maven build... - Goals: javadoc:javadoc <br>
- * - mit Maven: mvn javadoc:javadoc
+ * <li>Export->Javadoc-> ... VM Options: <code> -encoding utf8
+ * -docencoding utf8 -charset utf8</code> </li>
+ * <li>mit Eclipse Maven: Run As - Maven build... - Goals: javadoc:javadoc </li>
+ * <li>mit Maven: mvn javadoc:javadoc</li>
  * </ul>
  * <p>
  *

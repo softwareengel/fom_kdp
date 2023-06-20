@@ -11,7 +11,7 @@ import java.util.zip.GZIPInputStream;
  * 
  * @author engels
  * 
- * @see https://peoplegeneratorapi.live/get-started
+ * @see <a href="https://peoplegeneratorapi.live/get-started"></a>
  */
 public class Peoplegeneratorapi {
 
