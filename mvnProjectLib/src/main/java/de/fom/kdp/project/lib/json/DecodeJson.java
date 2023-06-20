@@ -9,6 +9,10 @@ import de.fom.kdp.project.lib.peoplegeneratorapi.Peoplegeneratorapi;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.Map;
 
 public class DecodeJson {
 //	public static void main(String[] args) throws IOException, InterruptedException {
@@ -43,5 +47,27 @@ public class DecodeJson {
 				System.out.println("private " + arrayType + "[] " + fieldName + ";");
 			}
 		}
+	}
+
+	/**
+	 * produce HashTable of Json Data 
+	 * 
+	 * @param jsonObject
+	 * @return
+	 */
+	public static Hashtable<String, Object> getElemHAshSet(JsonObject jsonObject) {
+		Hashtable<String, Object> keyValuePairs = new Hashtable<>();
+		// for (int i = 0; i < jsonArray.size(); i++) {
+		// JsonObject jsonObject = jsonArray.get(i).getAsJsonObject();
+
+		// Iterate over the key-value pairs in each JSON object
+		for (Map.Entry<String, com.google.gson.JsonElement> entry : jsonObject.entrySet()) {
+			String key = entry.getKey();
+			Object value = entry.getValue();
+			keyValuePairs.put(key, value);
+		}
+		// }
+		return keyValuePairs;
+
 	}
 }

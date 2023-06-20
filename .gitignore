@@ -10,3 +10,8 @@
 /mvnProjectLib/.settings/org.eclipse.core.resources.prefs
 /mvnProjectLib/.settings/org.eclipse.jdt.core.prefs
 /mvnProjectLib/.settings/org.eclipse.m2e.core.prefs
+.vscode/settings.json
+/mvnEdu/.settings
+/mvnEdu/doc
+/mvnProject/.settings
+/mvnProjectLib/.settings

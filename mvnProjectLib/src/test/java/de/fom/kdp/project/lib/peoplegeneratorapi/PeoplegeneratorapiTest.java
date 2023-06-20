@@ -3,6 +3,8 @@ package de.fom.kdp.project.lib.peoplegeneratorapi;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
+import java.util.Hashtable;
+import java.util.Map;
 
 import org.junit.Test;
 
@@ -27,31 +29,47 @@ public class PeoplegeneratorapiTest {
 //		Thread.sleep(1000); // waiting - not to fast repeat requests for api
 		int anzahl = 2;
 		String jsonPeople = Peoplegeneratorapi.getPeople(anzahl);
+		if (jsonPeople != null) {
+			
+			JsonArray jsonArray = JsonParser.parseString(jsonPeople).getAsJsonArray();
 
+			assertEquals(anzahl, jsonArray.size()); // is count of datasets okay?
 
-		JsonArray jsonArray = JsonParser.parseString(jsonPeople).getAsJsonArray();
-		
-		assertEquals(anzahl, jsonArray.size()); // is count of datasets okay? 
-		
-		for (JsonElement jsonElement : jsonArray) {
+			for (JsonElement jsonElement : jsonArray) {
 
-			if (jsonElement.isJsonObject()) {
-				JsonObject jsonObject = jsonElement.getAsJsonObject();
-				DecodeJson.generateClassFromJson(jsonObject);
+				if (jsonElement.isJsonObject()) {
+					JsonObject jsonObject = jsonElement.getAsJsonObject();
+					DecodeJson.generateClassFromJson(jsonObject);
 
+				}
+				System.out.println("-----------------------");
 			}
-			System.out.println("-----------------------");
+		}else
+		{
+			System.err.println("keine Daten vom Server ");
 		}
 	}
 
-//	@Test
-//	public void testMain() {
-//		try {
-//			Peoplegeneratorapi.main(null);
-//		} catch (IOException | InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
+	@Test
+	public void testgetElemHAshSet() throws IOException, InterruptedException {
+
+		String jsonPeople = Peoplegeneratorapi.getPeople(2);
+		JsonArray jsonArray = JsonParser.parseString(jsonPeople).getAsJsonArray();
+		for (JsonElement jsonElement : jsonArray) {
+
+			if (jsonElement.isJsonObject()) {
+//			countPeople++;
+				JsonObject jsonObject = jsonElement.getAsJsonObject();
+				// DecodeJson.generateClassFromJson(jsonObject);
+				Hashtable<String, Object> keyValuePairs = DecodeJson.getElemHAshSet(jsonObject);
+
+				// Print the key-value pairs
+				for (Map.Entry<String, Object> entry : keyValuePairs.entrySet()) {
+					System.out.println(entry.getKey() + ":" + entry.getValue());
+				}
+			}
+		}
+
+	}
 
 }
