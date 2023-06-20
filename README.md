@@ -1,2 +1,5 @@
-# fom_kdp
-KdP
+# fom_kdp - Projekte 
+
+- mvnEdu
+- mvnProject
+- mvnProjectLib
