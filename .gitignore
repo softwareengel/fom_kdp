@@ -15,3 +15,10 @@
 /mvnEdu/doc
 /mvnProject/.settings
 /mvnProjectLib/.settings
+bin
+/mvnEdu/.classpath
+/mvnEdu/.project
+/mvnProject/.classpath
+/mvnProject/.project
+/mvnProjectLib/.classpath
+/mvnProjectLib/.project
