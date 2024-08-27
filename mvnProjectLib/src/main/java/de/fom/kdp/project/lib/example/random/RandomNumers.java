@@ -9,7 +9,14 @@ import java.util.Random;
  * @author engels
  *
  */
-public class Main {
+public class RandomNumers {
+	/**
+	 * The entry point of the application.
+	 * 
+	 * @param args Command-line arguments passed to the program (not used in this
+	 *             example).
+	 */
+	
 	public static void main(String[] args) {
 		Random random = new Random();
 		float randomNumber = random.nextFloat();

@@ -3,6 +3,12 @@ package de.fom.kdp.project.lib.stdin;
 import java.util.Locale;
 import java.util.Scanner;
 
+/**
+ * ConsoleReader reads Data from Console - readString - readInt - readFloat
+ * 
+ * @author engels
+ *
+ */
 public class ConsoleReader {
 
 	/**

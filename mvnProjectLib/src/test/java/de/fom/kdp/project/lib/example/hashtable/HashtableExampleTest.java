@@ -8,7 +8,7 @@ public class HashtableExampleTest {
 
 	@Test
 	public void test() {
-		HashtableExample.main(null);
+		HashTableExample.main(null);
 	}
 
 }

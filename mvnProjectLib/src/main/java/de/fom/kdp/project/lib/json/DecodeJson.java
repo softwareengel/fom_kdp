@@ -1,18 +1,25 @@
 package de.fom.kdp.project.lib.json;
 
-import com.google.gson.Gson;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Map;
+
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-import de.fom.kdp.project.lib.peoplegeneratorapi.Peoplegeneratorapi;
-
-import java.io.IOException;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.Map;
+/**
+ * The {@code DecodeJson} class provides utility methods for processing and
+ * decoding JSON objects. It includes methods for generating Java class fields
+ * from a JSON object and for converting a JSON object into a {@code Hashtable}
+ * of key-value pairs.
+ *
+ * <p>
+ * This class is useful for dynamically handling JSON data, extracting fields,
+ * and converting JSON structures into more manageable Java data types.
+ * </p>
+ * 
+ * @author engels
+ */
 
 public class DecodeJson {
 //	public static void main(String[] args) throws IOException, InterruptedException {
@@ -25,7 +32,18 @@ public class DecodeJson {
 //			generateClassFromJson(jsonObject);
 //		}
 //	}
-
+	/**
+	 * Recursively generates Java class fields from the structure of a
+	 * {@code JsonObject}.
+	 * 
+	 * <p>
+	 * This method iterates through the entries of the provided {@code JsonObject}
+	 * and prints out Java class field declarations based on the types of the JSON
+	 * elements. It handles nested JSON objects, primitive fields, and arrays.
+	 * </p>
+	 *
+	 * @param jsonObject the {@code JsonObject} from which to generate class fields.
+	 */
 	public static void generateClassFromJson(JsonObject jsonObject) {
 		Iterator<Map.Entry<String, JsonElement>> iterator = jsonObject.entrySet().iterator();
 		while (iterator.hasNext()) {
@@ -50,10 +68,19 @@ public class DecodeJson {
 	}
 
 	/**
-	 * produce HashTable of Json Data 
+	 * Produces a {@code Hashtable} of key-value pairs from the provided
+	 * {@code JsonObject}.
 	 * 
-	 * @param jsonObject
-	 * @return
+	 * <p>
+	 * This method iterates over the entries of the {@code JsonObject} and stores
+	 * each key-value pair in a {@code Hashtable}. The keys are the field names, and
+	 * the values are the corresponding JSON elements.
+	 * </p>
+	 * 
+	 * @param jsonObject the {@code JsonObject} from which to extract key-value
+	 *                   pairs.
+	 * @return a {@code Hashtable} containing the key-value pairs from the JSON
+	 *         object.
 	 */
 	public static Hashtable<String, Object> getElemHAshSet(JsonObject jsonObject) {
 		Hashtable<String, Object> keyValuePairs = new Hashtable<>();

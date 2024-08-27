@@ -19,6 +19,12 @@ import java.io.IOException;
  *
  */
 public class FileWriteExample {
+	/**
+	 * The entry point of the application.
+	 * 
+	 * @param args Command-line arguments passed to the program (not used in this
+	 *             example).
+	 */
 	public static void main(String[] args) {
 		String content = "This is the content to be written into the file.";
 		String filePath = "file.txt";

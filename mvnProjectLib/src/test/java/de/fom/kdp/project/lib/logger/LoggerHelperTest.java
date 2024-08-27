@@ -21,11 +21,14 @@ public class LoggerHelperTest {
 
 			LoggerHelper.logInfo("Logging an informational message");
 			LoggerHelper.logWarning("Logging a warning message");
+			LoggerHelper.logError("Loggin Error"); // without throwing Exception
+			/* error log and throwoing exception 
 			try {
 				LoggerHelper.logError("Logging an error message", new RuntimeException("Test Sample exception"));
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
+			*/
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

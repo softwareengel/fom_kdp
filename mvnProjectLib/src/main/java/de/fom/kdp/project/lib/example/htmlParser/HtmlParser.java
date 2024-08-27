@@ -26,6 +26,12 @@ import org.jsoup.select.Elements;
  *
  */
 public class HtmlParser {
+	/**
+	 * The entry point of the application.
+	 * 
+	 * @param args Command-line arguments passed to the program (not used in this
+	 *             example).
+	 */
 	public static void main(String[] args) {
 		try {
 			// Fetch the HTML content from a URL

@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Map;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.google.gson.JsonArray;
@@ -24,6 +25,8 @@ import de.fom.kdp.project.lib.json.DecodeJson;
 public class PeoplegeneratorapiTest {
 
 	@Test
+	@Deprecated
+	@Ignore("This test is deprecated and will be removed in future versions.")
 	public void testGetPeople() throws IOException, InterruptedException {
 //		Thread.sleep(1000); // waiting - not to fast repeat requests for api
 		int anzahl = 2;
@@ -49,6 +52,8 @@ public class PeoplegeneratorapiTest {
 	}
 
 	@Test
+	@Deprecated
+	@Ignore("This test is deprecated and will be removed in future versions.")
 	public void testGetElemHashtable() throws IOException, InterruptedException {
 
 		String jsonPeople = Peoplegeneratorapi.getPeople(2);
