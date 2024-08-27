@@ -3,7 +3,6 @@ package de.fom.kdp.ProjektX;
 /**
  * A für viele A
  * 
- * @author engels
  */
 public class A {
 	A nextA;

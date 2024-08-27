@@ -21,7 +21,6 @@ import org.jsoup.select.Elements;
  * <li>Meta description</li>
  * </ul>
  * The extracted information is then printed to the console.
- * </p>
  * <p>
  * This example serves as a basic template for more advanced HTML parsing
  * operations. It demonstrates how to use Jsoup's CSS selector syntax to find
@@ -61,7 +60,6 @@ public class HtmlParser {
 	 * <li>Meta description</li>
 	 * </ul>
 	 * The extracted elements are printed to the console.
-	 * </p>
 	 * <p>
 	 * If an {@link IOException} or any other exception occurs during the process,
 	 * it is caught and the stack trace is printed.

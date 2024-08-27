@@ -22,12 +22,29 @@ public class HtmlParserTest {
 		HtmlParser.main(null);
 	}
 
+	/**
+	 * Tests the {@link HtmlParser#showHTMLTags(String)} method with a valid URL.
+	 * <p>
+	 * This method tests the extraction and display of HTML tags from a valid URL.
+	 * It verifies that the method correctly processes the HTML content from the
+	 * given URL ("https://heise.de") and outputs the HTML tags.
+	 * </p>
+	 */
 	@Test
 	public void testHTMLTags() {
 		String url = "https://heise.de";
 		HtmlParser.showHTMLTags(url);
 	}
-	
+
+	/**
+	 * Tests the {@link HtmlParser#showHTMLTags(String)} method with an invalid URL.
+	 * <p>
+	 * This method tests the behavior of the HTML tag extraction when provided with
+	 * an invalid URL ("blablablakeineUrl"). It verifies that the method handles
+	 * errors gracefully and does not cause the program to crash when processing an
+	 * incorrect or malformed URL.
+	 * </p>
+	 */
 	@Test
 	public void testHTMLTagsError() {
 		String url = "blablablakeineUrl";

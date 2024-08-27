@@ -1,7 +1,6 @@
 # mvnProjectX - Template 
 
-tbd : Anwendungsfall - Testabdeckung - Datenstruktur - Implementierung - CodeTest - Buildtest - Dokumentation - Review 
-
+## Vorlage 
 
 - Vorlage für eigenes Projekt 
 
@@ -16,4 +15,20 @@ tbd : Anwendungsfall - Testabdeckung - Datenstruktur - Implementierung - CodeTes
 - Maven Datei 
 
 	pom.xml
+
+## TODO: 
+
+- Anwendungsfall
+- Datenstruktur 
+- Glossar 
+- Implementierung 
+- Testdaten 
+- CodeTest - Junit 
+- Testabdeckung - Coverage 
+- Dokumentation 
+
+- ~Buildtest~
+- ~Review ~
+
+
 

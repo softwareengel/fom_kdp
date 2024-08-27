@@ -8,7 +8,6 @@ import org.junit.Test;
 /**
  * Test of A
  * 
- * @author engels
  *
  */
 public class Atest {
