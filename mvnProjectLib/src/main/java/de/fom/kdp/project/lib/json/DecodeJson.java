@@ -1,9 +1,11 @@
 package de.fom.kdp.project.lib.json;
 
+import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
@@ -22,16 +24,29 @@ import com.google.gson.JsonObject;
  */
 
 public class DecodeJson {
-//	public static void main(String[] args) throws IOException, InterruptedException {
-//		String json = "{\"name\":\"Shari Toy\",\"age\":1,\"job\":\"Student\",\"incomeUSD\":0,\"creditScore\":0,\"ccNumber\":null,\"married\":false,\"hasChildren\":false,\"height\":155.0,\"weight\":65.5,\"eyeColor\":\"GRAY\",\"email\":\"sharitoy@gmail.com\",\"gender\":\"Female\",\"hasDegree\":true,\"bloodType\":\"B+\",\"username\":\"shari51\",\"politicalLeaning\":0.07,\"religion\":\"Hinduism\",\"address\":{\"streetAddress\":\"2113 Kesha Road\",\"city\":\"Việt Trì\",\"state\":\"Hòa Bình\",\"country\":\"Vietnam\",\"zip\":\"2241\",\"geonameId\":1563926,\"phoneNumber\":\"+84 9548324390\",\"ipAddress\":\"194.202.128.22\",\"countryCode\":\"VN\"},\"doB\":\"Thu May 18 04:00:43 UTC 2023\",\"gpa\":0.0}";
-//		// json = Peoplegeneratorapi.getPeople(1);
-//		Gson gson = new Gson();
-//		JsonElement jsonElement = gson.fromJson(json, JsonElement.class);
-//		if (jsonElement.isJsonObject()) {
-//			JsonObject jsonObject = jsonElement.getAsJsonObject();
-//			generateClassFromJson(jsonObject);
-//		}
-//	}
+	/**
+	 * Main method for testing the functionality of the {@code DecodeJson} class.
+	 * <p>
+	 * This method parses a sample JSON string, converts it into a
+	 * {@code JsonObject}, and calls the {@code generateClassFromJson} method to
+	 * print out corresponding Java class fields.
+	 * </p>
+	 *
+	 * @param args command-line arguments (not used)
+	 * @throws IOException          if an I/O error occurs during execution
+	 * @throws InterruptedException if the operation is interrupted
+	 */
+	public static void main(String[] args) throws IOException, InterruptedException {
+		String json = "{\"name\":\"Shari Toy\",\"age\":1,\"job\":\"Student\",\"incomeUSD\":0,\"creditScore\":0,\"ccNumber\":null,\"married\":false,\"hasChildren\":false,\"height\":155.0,\"weight\":65.5,\"eyeColor\":\"GRAY\",\"email\":\"sharitoy@gmail.com\",\"gender\":\"Female\",\"hasDegree\":true,\"bloodType\":\"B+\",\"username\":\"shari51\",\"politicalLeaning\":0.07,\"religion\":\"Hinduism\",\"address\":{\"streetAddress\":\"2113 Kesha Road\",\"city\":\"Việt Trì\",\"state\":\"Hòa Bình\",\"country\":\"Vietnam\",\"zip\":\"2241\",\"geonameId\":1563926,\"phoneNumber\":\"+84 9548324390\",\"ipAddress\":\"194.202.128.22\",\"countryCode\":\"VN\"},\"doB\":\"Thu May 18 04:00:43 UTC 2023\",\"gpa\":0.0}";
+		// json = Peoplegeneratorapi.getPeople(1);
+		Gson gson = new Gson();
+		JsonElement jsonElement = gson.fromJson(json, JsonElement.class);
+		if (jsonElement.isJsonObject()) {
+			JsonObject jsonObject = jsonElement.getAsJsonObject();
+			generateClassFromJson(jsonObject);
+		}
+	}
+
 	/**
 	 * Recursively generates Java class fields from the structure of a
 	 * {@code JsonObject}.

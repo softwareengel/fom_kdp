@@ -8,8 +8,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 /**
- * In this example, we added more parsing operations using Jsoup. Here's
- * what it does:
+ * In this example, we added more parsing operations using Jsoup. Here's what it
+ * does:
  *
  * Fetches the HTML content from a specified URL using Jsoup.connect(url).get().
  * Extracts links (a tags with href attribute), images (img tags with src
@@ -33,9 +33,14 @@ public class HtmlParser {
 	 *             example).
 	 */
 	public static void main(String[] args) {
+		// Fetch the HTML content from a URL
+		String url = "https://hackernews.com";
+
+		showHTMLTags(url);
+	}
+
+	public static void showHTMLTags(String url) {
 		try {
-			// Fetch the HTML content from a URL
-			String url = "https://hackernews.com";
 
 			// using External Lib Jsoup
 			Document document = Jsoup.connect(url).get();
@@ -73,6 +78,12 @@ public class HtmlParser {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			// Other Exceptions
+			// java.lang.IllegalArgumentException: The supplied URL, 'blablablakeineUrl', is
+			// malformed. Make sure it is an absolute URL, and starts with 'http://' or
+			// 'https://'. See https://jsoup.org/cookbook/extracting-data/working-with-urls
+			// e.printStackTrace();
 		}
 	}
 }

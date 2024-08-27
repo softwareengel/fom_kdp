@@ -18,7 +18,7 @@ import java.io.IOException;
  * @author engels
  *
  */
-public class FileWriteExample {
+public class FileWrite {
 	/**
 	 * The entry point of the application.
 	 * 
@@ -26,17 +26,22 @@ public class FileWriteExample {
 	 *             example).
 	 */
 	public static void main(String[] args) {
+
 		String content = "This is the content to be written into the file.";
 		String filePath = "file.txt";
-
 		try {
-			FileWriter writer = new FileWriter(filePath);
-			writer.write(content);
-			writer.close();
-			System.out.println("Successfully wrote the content to the file.");
-
+			writeFile(content, filePath);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public static void writeFile(String content, String filePath) throws IOException {
+
+		FileWriter writer = new FileWriter(filePath);
+		writer.write(content);
+		writer.close();
+		System.out.println("Successfully wrote the content to the file.");
+
 	}
 }

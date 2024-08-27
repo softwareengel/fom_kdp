@@ -16,7 +16,6 @@ public class RandomNumers {
 	 * @param args Command-line arguments passed to the program (not used in this
 	 *             example).
 	 */
-	
 	public static void main(String[] args) {
 		Random random = new Random();
 		float randomNumber = random.nextFloat();

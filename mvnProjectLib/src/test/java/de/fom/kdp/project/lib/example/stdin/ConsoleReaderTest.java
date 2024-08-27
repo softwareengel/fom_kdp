@@ -10,10 +10,19 @@ import org.junit.Test;
 import de.fom.kdp.project.lib.stdin.ConsoleReader;
 
 /**
- * test for Scanner in ConsoleReader
- *
- * @author engels
- *
+ * Test class for {@link ConsoleReader}.
+ * <p>
+ * This class contains unit tests to verify the functionality of the
+ * {@link ConsoleReader} class. It simulates user input via a custom
+ * {@link ByteArrayInputStream} class to test the different input reading
+ * methods provided by {@link ConsoleReader}.
+ * </p>
+ * <p>
+ * The tests cover the reading of strings, integers, floats, and doubles from
+ * the console input.
+ * </p>
+ * 
+ * @see ConsoleReader
  */
 public class ConsoleReaderTest {
 	/**
@@ -24,7 +33,14 @@ public class ConsoleReaderTest {
 	 * The ByteArrayInputStream class is useful when you have data stored in a byte
 	 * array and need to read it as an input stream, which is especially handy in
 	 * cases where other code expects an InputStream interface.
-	 *
+	 * 
+	 * A custom {@link InputStream} implementation that simulates input from a byte
+	 * array.
+	 * <p>
+	 * This class allows the tests to simulate user input by providing data as an
+	 * input stream that can be read by the {@link ConsoleReader} methods.
+	 * </p>
+	 * 
 	 * @author engels
 	 *
 	 */
@@ -32,11 +48,25 @@ public class ConsoleReaderTest {
 		private byte[] buffer;
 		private int position;
 
+		/**
+		 * Constructs a new {@link ByteArrayInputStream} with the specified byte array
+		 * as the source of the input stream.
+		 * 
+		 * @param buffer the byte array to be used as the input source
+		 */
 		public ByteArrayInputStream(byte[] buffer) {
 			this.buffer = buffer;
 			this.position = 0;
 		}
 
+		/**
+		 * Reads the next byte of data from the input stream. Returns -1 if the end of
+		 * the stream has been reached.
+		 * 
+		 * @return the next byte of data, or -1 if the end of the stream has been
+		 *         reached
+		 * @throws IOException if an I/O error occurs
+		 */
 		@Override
 		public int read() throws IOException {
 			if (position >= buffer.length) {
@@ -46,6 +76,13 @@ public class ConsoleReaderTest {
 		}
 	}
 
+	/**
+	 * Tests the {@link ConsoleReader#readString()} method.
+	 * <p>
+	 * This test simulates user input of a string and verifies that the
+	 * {@link ConsoleReader} correctly reads and returns the input string.
+	 * </p>
+	 */
 	@Test
 	public void testReadString() {
 		// Simulating user input of "hello"
@@ -57,6 +94,13 @@ public class ConsoleReaderTest {
 		assertEquals(input, s);
 	}
 
+	/**
+	 * Tests the {@link ConsoleReader#readInt()} method.
+	 * <p>
+	 * This test simulates user input of an integer and verifies that the
+	 * {@link ConsoleReader} correctly reads and returns the input integer.
+	 * </p>
+	 */
 	@Test
 	public void testReadInt() {
 		// Simulating user input of "1"
@@ -68,6 +112,13 @@ public class ConsoleReaderTest {
 		assertEquals(input, "" + i);
 	}
 
+	/**
+	 * Tests the {@link ConsoleReader#readFloat()} method.
+	 * <p>
+	 * This test simulates user input of a float and verifies that the
+	 * {@link ConsoleReader} correctly reads and returns the input float.
+	 * </p>
+	 */
 	@Test
 	public void testReadFloat() {
 		// Simulating user input of "1.0"
@@ -81,6 +132,13 @@ public class ConsoleReaderTest {
 		assertEquals(Float.parseFloat(input), f, 0); // compare float with delta
 	}
 
+	/**
+	 * Tests the {@link ConsoleReader#readDouble()} method.
+	 * <p>
+	 * This test simulates user input of a double and verifies that the
+	 * {@link ConsoleReader} correctly reads and returns the input double.
+	 * </p>
+	 */
 	@Test
 	public void testReadDouble() {
 		// Simulating user input of "1.0"

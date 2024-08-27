@@ -20,7 +20,7 @@ import java.io.IOException;
  * @author engels
  *
  */
-public class FileReadExample {
+public class FileRead {
 	/**
 	 * The entry point of the application.
 	 * 
@@ -30,6 +30,10 @@ public class FileReadExample {
 	public static void main(String[] args) {
 		String filePath = "file.txt";
 
+		fileRead(filePath);
+	}
+
+	private static void fileRead(String filePath) {
 		try {
 			FileReader fileReader = new FileReader(filePath);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
