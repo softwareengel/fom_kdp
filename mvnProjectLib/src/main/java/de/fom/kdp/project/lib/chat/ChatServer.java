@@ -77,23 +77,23 @@ public class ChatServer implements Runnable {
 	 *
 	 * @param args command-line arguments (not used in this example).
 	 */
-//	public static void main(String[] args) {
-//
-//		try {
-//			ChatServer server = new ChatServer(12345);
-//			// server.startChatServer();
-//			Thread serverthread = new Thread(server);
-//			serverthread.start();
-//
-////			Thread.sleep(5000);
-////			server.stop();
-////			serverthread.join();
-//
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
+	public static void main(String[] args) {
+
+		try {
+			ChatServer server = new ChatServer(12345);
+			// server.startChatServer();
+			Thread serverthread = new Thread(server);
+			serverthread.start();
+
+//			Thread.sleep(5000);
+//			server.stop();
+//			serverthread.join();
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 	/**
 	 * Starts the chat server, listening for incoming client connections and

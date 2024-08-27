@@ -4,17 +4,26 @@ import java.util.Locale;
 import java.util.Scanner;
 
 /**
- * ConsoleReader reads Data from Console - readString - readInt - readFloat
+ * The {@code ConsoleReader} class provides methods to read different types of
+ * data from the console.
+ * <p>
+ * The available methods allow you to read and return strings, integers, floats,
+ * and doubles from the console. It also demonstrates how to handle locale
+ * settings when reading decimal numbers.
+ * </p>
  * 
  * @author engels
- *
  */
 public class ConsoleReader {
 
 	/**
-	 * read string from console
+	 * Reads a string from the console.
+	 * <p>
+	 * This method prompts the user to enter a string and then reads the entire line
+	 * of input.
+	 * </p>
 	 *
-	 * @return String with console input data
+	 * @return the string entered by the user
 	 */
 	public static String readString() {
 		try (Scanner scanner = new Scanner(System.in)) {
@@ -26,9 +35,14 @@ public class ConsoleReader {
 	}
 
 	/**
-	 * read int from console
+	 * Reads an integer from the console.
+	 * <p>
+	 * This method prompts the user to enter an integer value and then reads the
+	 * integer from the input.
+	 * </p>
 	 *
-	 * @return int with console input data
+	 * @return the integer entered by the user
+	 * @throws java.util.InputMismatchException if the input is not a valid integer
 	 */
 	public static int readInt() {
 		try (Scanner scanner = new Scanner(System.in)) {
@@ -40,9 +54,15 @@ public class ConsoleReader {
 	}
 
 	/**
-	 * read float from console
-	 * 
-	 * @return float with console input data
+	 * Reads a float from the console with locale settings.
+	 * <p>
+	 * This method prompts the user to enter a float value. It demonstrates how to
+	 * manage locale settings for decimal separators, ensuring the correct
+	 * interpretation of the float value.
+	 * </p>
+	 *
+	 * @return the float entered by the user
+	 * @throws java.util.InputMismatchException if the input is not a valid float
 	 */
 	public static float readFloat() {
 		try (Scanner scanner = new Scanner(System.in)) {
@@ -63,9 +83,15 @@ public class ConsoleReader {
 	}
 
 	/**
-	 * read double from console
-	 * 
-	 * @return double with console input data
+	 * Reads a double from the console with locale settings.
+	 * <p>
+	 * This method prompts the user to enter a double value. It demonstrates how to
+	 * manage locale settings for decimal separators, ensuring the correct
+	 * interpretation of the double value.
+	 * </p>
+	 *
+	 * @return the double entered by the user
+	 * @throws java.util.InputMismatchException if the input is not a valid double
 	 */
 	public static double readDouble() {
 
