@@ -128,15 +128,15 @@ public class ChatClient implements Runnable {
 	 *                              thread.
 	 */
 
-	public static void main(String[] args) throws UnknownHostException, IOException, InterruptedException {
-		ChatClient chatClient = new ChatClient("localhost", 12345);
-		Thread clientthread = new Thread(chatClient);
-		clientthread.start();
-
-//		Thread.sleep(5000);
-//		chatClient.stop();
-//		clientthread.join();
-	}
+//	public static void main(String[] args) throws UnknownHostException, IOException, InterruptedException {
+//		ChatClient chatClient = new ChatClient("localhost", 12345);
+//		Thread clientthread = new Thread(chatClient);
+//		clientthread.start();
+//
+////		Thread.sleep(5000);
+////		chatClient.stop();
+////		clientthread.join();
+//	}
 
 	/**
 	 * The {@code ReceiveThread} class handles the reception of messages from the

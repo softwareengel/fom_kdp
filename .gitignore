@@ -22,3 +22,8 @@ bin
 /mvnProject/.project
 /mvnProjectLib/.classpath
 /mvnProjectLib/.project
+/mvnProjectLib/stock_data.csv
+/mvnProjectLib/list.ser
+/mvnProjectLib/file.txt
+doc
+/mvnProjectLib/application.log
