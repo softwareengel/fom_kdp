@@ -1,4 +1,4 @@
-package de.fom.kdp.skript.kap4;
+package de.fom.kdp.ml.kap4;
 public class Aufg_04_05 {
 
     public static void main(String[] args) {

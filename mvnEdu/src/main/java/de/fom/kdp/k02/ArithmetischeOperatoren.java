@@ -1,4 +1,4 @@
-package de.fom.kdp.k02.imperativ;
+package de.fom.kdp.k02;
 
 /**
  * 

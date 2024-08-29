@@ -1,4 +1,4 @@
-package de.fom.kdp.skript.kap3;
+package de.fom.kdp.ml.kap3;
 
 public class A3_3ML {
     public static void main(String[] args) {

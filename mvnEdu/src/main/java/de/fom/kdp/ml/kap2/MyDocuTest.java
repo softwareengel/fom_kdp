@@ -1,4 +1,4 @@
-package de.fom.kdp.skript.kap2;
+package de.fom.kdp.ml.kap2;
 
 /**
  * MyDocuTest Dokumentation

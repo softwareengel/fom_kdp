@@ -1,4 +1,4 @@
-package de.fom.kdp.skript.kap5;
+package de.fom.kdp.ml.kap5;
 import java.util.Scanner;
 
 public class A05_02 {

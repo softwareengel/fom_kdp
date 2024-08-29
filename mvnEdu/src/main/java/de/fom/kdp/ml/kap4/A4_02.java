@@ -1,4 +1,4 @@
-package de.fom.kdp.skript.kap4;
+package de.fom.kdp.ml.kap4;
 
 import java.util.Scanner;
 
