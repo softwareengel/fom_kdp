@@ -1,4 +1,4 @@
-package de.fom.kdp.k01.hello;
+package de.fom.kdp.k01;
 
 public class HelloWorld {
 
