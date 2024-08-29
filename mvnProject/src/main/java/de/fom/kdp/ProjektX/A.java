@@ -21,7 +21,7 @@ package de.fom.kdp.ProjektX;
  * second.setI(20);
  * first.setNextA(second);
  * </pre>
- * </p>
+ * 
  * 
  * @author engels
  * @version 1.0
